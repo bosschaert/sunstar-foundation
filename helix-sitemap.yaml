@@ -4,5 +4,7 @@ sitemaps:
   default:
     origin: https://www.sunstar-foundation.org
     source: /query-index.json
-    destination: /sitemap.xml
+    destination: /sitemap-ja.xml
     lastmod: YYYY-MM-DD
+    hreflang: ja
+
