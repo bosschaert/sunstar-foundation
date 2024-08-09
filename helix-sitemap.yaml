@@ -13,7 +13,7 @@ sitemaps:
       en:
         origin: https://www.sunstar-foundation.org
         source: /query-index.json?sheet=en-search
-        destination: /sitemap-enx.xml
+        destination: /sitemap-en.xml
         lastmod: YYYY-MM-DD
         hreflang: en
         alternate: /en/{path}
