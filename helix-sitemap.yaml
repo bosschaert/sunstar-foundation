@@ -3,6 +3,7 @@ auto-generated: true
 sitemaps:
   sunstar-foundation:
     default: ja
+    lastmod: YYYY-MM-DD
     languages:
       ja:
         origin: https://www.sunstar-foundation.org
