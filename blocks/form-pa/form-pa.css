@@ -9,7 +9,7 @@
   --form-input-disabled: #e9ecef;
 }
 
-main .form,
+main .form-pa,
 main .section.form-container .default-content-wrapper {
   max-width: 560px;
 }
@@ -18,23 +18,23 @@ main .section.form-container .default-content-wrapper {
   margin: auto;
 }
 
-main .form.narrower,
+main .form-pa.narrower,
 main .section.narrower.form-container .default-content-wrapper {
   max-width: 560px;
 }
 
-main .form {
+main .form-pa {
   margin: 0 auto 120px;
 }
 
-main .section.narrow .form {
+main .section.narrow .form-pa {
   padding: 0 1rem;
   margin-left: 0;
 }
 
-main .form input,
-main .form textarea,
-main .form select {
+main .form-pa input,
+main .form-pa textarea,
+main .form-pa select {
   margin: 0;
   border: 1px solid #000;
   padding: 12px 1rem;
@@ -52,13 +52,13 @@ main .form select {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-main .form input,
-main .form textarea {
+main .form-pa input,
+main .form-pa textarea {
   background-color: var(--form-input-bg-color);
   border: 1px solid var(--form-input-border-color);
 }
 
-main .form select {
+main .form-pa select {
   appearance: none;
   background-color: var(--form-select-bg-color);
   border: 1px solid var(--form-select-border-color);
@@ -68,35 +68,35 @@ main .form select {
   background-size: 24px;
 }
 
-main .form select:disabled {
+main .form-pa select:disabled {
   background-color: var(--form-input-disabled);
   opacity: 1;
 }
 
-main .form textarea {
+main .form-pa textarea {
   min-height: 240px;
 }
 
-main .form .invalid>input,
-main .form .invalid>textarea,
-main .form .invalid>select {
+main .form-pa .invalid>input,
+main .form-pa .invalid>textarea,
+main .form-pa .invalid>select {
   border-color: var(--form-invalid-color);
 }
 
-main .form input:hover,
-main .form textarea:hover,
-main .form select:hover {
+main .form-pa input:hover,
+main .form-pa textarea:hover,
+main .form-pa select:hover {
   border-color: var(--highlight-background-color);
 }
 
-main .form input:focus,
-main .form textarea:focus,
-main .form select:focus {
+main .form-pa input:focus,
+main .form-pa textarea:focus,
+main .form-pa select:focus {
   border-color: var(--form-input-focus-color);
   outline: 0;
 }
 
-main .form select:focus {
+main .form-pa select:focus {
   background-color: var(--form-input-bg-color);
   box-shadow: none;
 }
@@ -105,20 +105,20 @@ main .form-text-wrapper div {
   font-size: var(--body-font-size-s);
 }
 
-main .form .invalid>input:hover,
-main .form .invalid>textarea:hover,
-main .form .invalid>select:hover {
+main .form-pa .invalid>input:hover,
+main .form-pa .invalid>textarea:hover,
+main .form-pa .invalid>select:hover {
   border-color: var(--form-invalid-color);
 }
 
-main .form .invalid>input:focus,
-main .form .invalid>textarea:focus,
-main .form .invalid>select:focus {
+main .form-pa .invalid>input:focus,
+main .form-pa .invalid>textarea:focus,
+main .form-pa .invalid>select:focus {
   border-color: var(--form-invalid-color);
   outline: 0;
 }
 
-main .form label {
+main .form-pa label {
   width: 100%;
   display: block;
   box-sizing: border-box;
@@ -128,41 +128,41 @@ main .form label {
   margin-bottom: 0.5rem;
 }
 
-main .form label>span {
+main .form-pa label>span {
   color: rgba(60 70 80 / 50%);
   font-weight: normal;
   font-size: var(--body-font-size-s);
   margin-left: 0.5rem;
 }
 
-main .form .field-wrapper {
+main .form-pa .field-wrapper {
   margin-bottom: 1.5rem;
 }
 
-main .form .form-validate-label {
+main .form-pa .form-validate-label {
   color: var(--form-invalid-color);
   font-size: var(--body-font-size-s);
   margin-top: 0.5rem;
   display: none;
 }
 
-main .form .invalid>.form-validate-label {
+main .form-pa .invalid>.form-validate-label {
   display: block;
 }
 
-main .form .hidden {
+main .form-pa .hidden {
   display: none;
 }
 
-main .form .form-checkbox-wrapper {
+main .form-pa .form-checkbox-wrapper {
   display: flex;
 }
 
-main .form .form-checkbox-wrapper input[type='checkbox'] {
+main .form-pa .form-checkbox-wrapper input[type='checkbox'] {
   display: none;
 }
 
-main .form .form-checkbox-wrapper input[type='checkbox']+label::before {
+main .form-pa .form-checkbox-wrapper input[type='checkbox']+label::before {
   float: left;
   margin-top: 2px;
   margin-right: 5px;
@@ -173,19 +173,19 @@ main .form .form-checkbox-wrapper input[type='checkbox']+label::before {
   background-size: contain;
 }
 
-main .form .form-checkbox-wrapper input[type='checkbox']:checked+label::before {
+main .form-pa .form-checkbox-wrapper input[type='checkbox']:checked+label::before {
   background: url('./checkbox-checked.svg');
   background-size: contain;
   content: ' ';
 }
 
-main .form .form-checkbox-wrapper label {
+main .form-pa .form-checkbox-wrapper label {
   font-weight: normal;
   text-transform: none;
   display: block;
 }
 
-main .form .button {
+main .form-pa .button {
   cursor: pointer;
   background: var(--button-background-color);
   color: var(--button-text-color);
@@ -202,12 +202,12 @@ main .form .button {
   line-height: 1;
 }
 
-main .form .button:disabled {
+main .form-pa .button:disabled {
   background: var(--button-background-disabled-color);
   cursor: initial;
 }
 
-main .form .form-note>p {
+main .form-pa .form-note>p {
   font-size: 12px;
   font-weight: 500;
   color: rgb(60 70 80 / 50%);
@@ -216,19 +216,19 @@ main .form .form-note>p {
   letter-spacing: normal;
 }
 
-main .form .userconsent-note>p {
+main .form-pa .userconsent-note>p {
   font-size: 14px;
   line-height: 1.429;
   margin-bottom: 12px;
   letter-spacing: normal;
 }
 
-main .form .userconsent-note>p>a {
+main .form-pa .userconsent-note>p>a {
   text-decoration: underline;
   font-weight: 700;
 }
 
-main .form .addresses p {
+main .form-pa .addresses p {
   margin-top: 1.5rem;
   font-weight: var(--font-weight-regular);
   font-size: var(--body-font-size-m);
@@ -237,7 +237,7 @@ main .form .addresses p {
   color: #3C4650;
 }
 
-main .form .addresses p strong {
+main .form-pa .addresses p strong {
   font-weight: var(--font-weight-bold);
   line-height: 1;
   display: inline-block;
