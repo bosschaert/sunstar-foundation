@@ -62,8 +62,8 @@ function constructPayload(form) {
 
 async function submitForm(form) {
   const payload = constructPayload(form);
-  const resp = await fetch('https://prod-166.westus.logic.azure.com:443/workflows/2a912f4c1cdb457183764c5589494395/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Trn5X7gpcqKK1M0UVXVBWft3JaYApBkpDygQFwM24BQ', {
-    method: 'POST',
+  const resp = await fetch(submitURL, {
+      method: 'POST',
     cache: 'no-cache',
     headers: {
       'Content-Type': 'application/json',
@@ -188,6 +188,7 @@ function createValidateLabel(msg) {
 
 let captchaElement;
 let userconsentElement;
+let submitURL;
 
 /**
  * id of the reCaptcha service in the user consent manager (todo: make configurable via form?)
@@ -336,6 +337,10 @@ function createCaptcha(fd) {
   return captchaElement;
 }
 
+function setSubmitURL(fd) {
+  submitURL = fd.Extra;
+}
+
 async function createForm(formURL) {
   const { pathname } = new URL(formURL);
   const resp = await fetch(pathname);
@@ -402,6 +407,9 @@ async function createForm(formURL) {
         break;
       case 'captcha':
         append(createCaptcha(fd));
+        break;
+      case 'url':
+        setSubmitURL(fd);
         break;
       default:
         append(createLabel(fd));
