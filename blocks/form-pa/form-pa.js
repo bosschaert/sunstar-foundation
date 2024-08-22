@@ -408,7 +408,7 @@ async function createForm(formURL) {
       case 'captcha':
         append(createCaptcha(fd));
         break;
-      case 'url':
+      case 'paUrl':
         setSubmitURL(fd);
         break;
       default:
