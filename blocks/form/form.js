@@ -309,7 +309,6 @@ window.captchaRenderCallback = () => {
 };
 
 function createCaptcha(fd) {
-  return; // TODO remove again after testing!
   captchaElement = document.createElement('div');
 
   window.captchaRenderCallback = () => {
